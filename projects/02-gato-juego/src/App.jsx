@@ -6,11 +6,6 @@ import { TURNS } from "./logic/constants.js"
 import { checkWinnerFrom, checkEndGame } from "./logic/bord.js"
 import { WinnerModal } from "./components/WinnerModal.jsx"
 
-
-
-
-
-
 function App() {
   const [board, setBoard] = useState(() => {
     const boardFromStorage = window.localStorage.getItem('board')
@@ -79,6 +74,7 @@ function App() {
       </section>
 
 
+
       <section className="turn">
         <Square isSelected={turn === TURNS.X}>
           {TURNS.X}
@@ -87,8 +83,6 @@ function App() {
           {TURNS.O}
         </Square>
       </section>
-
-
 
       <WinnerModal resetGame={resetGame} winner={winner} />
     </main>
